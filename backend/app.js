@@ -19,6 +19,13 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
+app.get('/',(req,res)=>{
+    res.json({
+        success:true,
+        message:"Welcome to Lucknow"
+    })
+})
+
 app.use('/api/v1/message',messageRouter);
 
 
